@@ -1,0 +1,9 @@
+main: de.einphil.hardcoresmp.HardcoreSMP
+name: HardcoreSMP
+version: 1.0
+api-version: 1.19
+description: Core plugin of the hardcore smp server
+author: EinPhil_, MaximDe
+
+commands:
+  sethealth:
