@@ -3,7 +3,7 @@ package de.einphil.hardcoresmp.commands;
 
 
 import com.maximde.pluginutils.ColorUtils;
-import de.einphil.hardcoresmp.ItemBuilder;
+import de.einphil.hardcoresmp.utils.ItemBuilder;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -14,7 +14,7 @@ import org.bukkit.entity.Player;
 import java.awt.*;
 
 
-public class GetReviveItem implements CommandExecutor {
+public class GetReviveItemCommand implements CommandExecutor {
 
 
     @Override

@@ -1,21 +1,28 @@
 package de.einphil.hardcoresmp;
 import com.maximde.pluginutils.ColorUtils;
-import de.einphil.hardcoresmp.commands.GetReviveItem;
+import de.einphil.hardcoresmp.commands.GetReviveItemCommand;
 import de.einphil.hardcoresmp.commands.SetHealthCommand;
-import de.einphil.hardcoresmp.commands.Spawn;
+import de.einphil.hardcoresmp.commands.SitCommand;
+import de.einphil.hardcoresmp.commands.SpawnCommand;
 import de.einphil.hardcoresmp.listeners.*;
+import de.einphil.hardcoresmp.utils.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
+import org.bukkit.entity.ArmorStand;
 import org.bukkit.event.Listener;
-import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.ShapedRecipe;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.awt.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.UUID;
 
 
 public class HardcoreSMP extends JavaPlugin implements Listener {
+
+    public Map<UUID, ArmorStand> seats = new HashMap<>();
 
     @Override
     public void onEnable() {
@@ -26,8 +33,9 @@ public class HardcoreSMP extends JavaPlugin implements Listener {
         Bukkit.getPluginManager().registerEvents(new PlayerBlockPlaceListener(), this);
         Bukkit.getPluginManager().registerEvents(new PlayerChatEvent(), this);
         getCommand("sethealth").setExecutor(new SetHealthCommand());
-        getCommand("getreviveitem").setExecutor(new GetReviveItem());
-        getCommand("spawn").setExecutor(new Spawn());
+        getCommand("getreviveitem").setExecutor(new GetReviveItemCommand());
+        getCommand("spawn").setExecutor(new SpawnCommand());
+        getCommand("set").setExecutor(new SitCommand(this));
         createRecipe();
     }
 

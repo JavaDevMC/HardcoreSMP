@@ -1,7 +1,7 @@
 package de.einphil.hardcoresmp.listeners;
 
 import com.maximde.pluginutils.ColorUtils;
-import de.einphil.hardcoresmp.GriefingLogger;
+import de.einphil.hardcoresmp.utils.GriefingLogger;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;

@@ -1,6 +1,6 @@
 package de.einphil.hardcoresmp.listeners;
 
-import de.einphil.hardcoresmp.GriefingLogger;
+import de.einphil.hardcoresmp.utils.GriefingLogger;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

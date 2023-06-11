@@ -1,4 +1,4 @@
-package de.einphil.hardcoresmp;
+package de.einphil.hardcoresmp.utils;
 
 import org.bukkit.entity.Player;
 
@@ -11,9 +11,6 @@ import java.util.Date;
 
 public class GriefingLogger {
     private static final String LOG_DIRECTORY_PATH = "plugins/HardcoreSMP/";
-
-
-
     private static final String LOG_FILE_PREFIX = "grieflog";
     private static final String LOG_FILE_EXTENSION = ".txt";
 

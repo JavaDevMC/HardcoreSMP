@@ -1,12 +1,11 @@
 package de.einphil.hardcoresmp.listeners;
 
 import com.maximde.pluginutils.ColorUtils;
-import de.einphil.hardcoresmp.ItemBuilder;
+import de.einphil.hardcoresmp.utils.ItemBuilder;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.OfflinePlayer;
-import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.AsyncPlayerChatEvent;

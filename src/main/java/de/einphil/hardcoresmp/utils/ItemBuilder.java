@@ -1,4 +1,4 @@
-package de.einphil.hardcoresmp;
+package de.einphil.hardcoresmp.utils;
 
 
 import org.bukkit.Material;
