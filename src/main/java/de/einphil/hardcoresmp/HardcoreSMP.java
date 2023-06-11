@@ -32,11 +32,11 @@ public class HardcoreSMP extends JavaPlugin implements Listener {
         NamespacedKey key = new NamespacedKey(this, "revive_item");
         ItemBuilder itemBuilder = new ItemBuilder(Material.STRUCTURE_VOID, 1, ColorUtils.generateGradientText(Color.ORANGE, Color.WHITE, "Wiederbelebungs Item"));
         ShapedRecipe recipe = new ShapedRecipe(key, itemBuilder.getItemStack());
-        recipe.shape("SDS",
-                "DND",
-                "SDS");
-        recipe.setIngredient('N', Material.NETHERITE_BLOCK);
-        recipe.setIngredient('S', Material.WITHER_SKELETON_SKULL);
+        recipe.shape("DAD",
+                "ARA",
+                "DAD");
+        recipe.setIngredient('A', Material.AIR);
+        recipe.setIngredient('R', Material.BEEF);
         recipe.setIngredient('D', Material.DIAMOND_BLOCK);
         getServer().addRecipe(recipe);
     }
