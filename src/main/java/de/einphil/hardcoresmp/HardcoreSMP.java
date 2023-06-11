@@ -35,7 +35,7 @@ public class HardcoreSMP extends JavaPlugin implements Listener {
         getCommand("sethealth").setExecutor(new SetHealthCommand());
         getCommand("getreviveitem").setExecutor(new GetReviveItemCommand());
         getCommand("spawn").setExecutor(new SpawnCommand());
-        getCommand("set").setExecutor(new SitCommand(this));
+        getCommand("sit").setExecutor(new SitCommand(this));
         createRecipe();
     }
 
