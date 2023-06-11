@@ -2,6 +2,7 @@ package de.einphil.hardcoresmp;
 import com.maximde.pluginutils.ColorUtils;
 import de.einphil.hardcoresmp.commands.GetReviveItem;
 import de.einphil.hardcoresmp.commands.SetHealthCommand;
+import de.einphil.hardcoresmp.commands.Spawn;
 import de.einphil.hardcoresmp.listeners.*;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -15,6 +16,7 @@ import java.awt.*;
 
 
 public class HardcoreSMP extends JavaPlugin implements Listener {
+
     @Override
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(new PlayerDeathListener(), this);
@@ -25,6 +27,7 @@ public class HardcoreSMP extends JavaPlugin implements Listener {
         Bukkit.getPluginManager().registerEvents(new PlayerChatEvent(), this);
         getCommand("sethealth").setExecutor(new SetHealthCommand());
         getCommand("getreviveitem").setExecutor(new GetReviveItem());
+        getCommand("spawn").setExecutor(new Spawn());
         createRecipe();
     }
 
