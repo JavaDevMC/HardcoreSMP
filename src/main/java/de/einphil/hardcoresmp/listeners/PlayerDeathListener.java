@@ -26,7 +26,7 @@ public class PlayerDeathListener implements Listener {
             removeHearts(victim);
             return;
         }
-
+        victim.setMaxHealth(20);
         if (killer == null) {
             victim.setWhitelisted(false);
             victim.kickPlayer(ColorUtils.generateGradientText(new Color(206, 0, 0), new Color(238, 84, 0), "Du bist gestorben und damit raus!"));

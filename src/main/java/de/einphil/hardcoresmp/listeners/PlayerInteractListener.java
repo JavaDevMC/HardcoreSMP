@@ -32,7 +32,7 @@ public class PlayerInteractListener implements Listener {
                     } else {
                         usedReviveItem.add(player.getUniqueId());
                         player.getInventory().remove(event.getItem());
-                        player.sendMessage(ChatColor.GREEN+"Schreibe den namen des Spielers welchen du wiederbelen willst in den Chat!");
+                        player.sendMessage(ChatColor.GREEN+"Schreibe den Namen des Spielers welchen du wiederbelen willst in den Chat!");
                     }
                 }
             }
