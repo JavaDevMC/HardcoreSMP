@@ -33,7 +33,7 @@ public class PlayerDeathListener implements Listener {
             return;
         }
         GriefingLogger.log(killer, "killed " + victim.getName());
-        if(killer.getMaxHealth() <= 4) {
+        if(killer.getMaxHealth() <= 2) {
             killer.setHealth(0);
             killer.setWhitelisted(false);
             killer.kickPlayer(ColorUtils.generateGradientText(new Color(206, 0, 0), new Color(238, 84, 0), "Du hast jemanden getötet und deine letzen Herzen verloren! Damit bist du raus!"));
