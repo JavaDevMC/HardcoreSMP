@@ -2,6 +2,8 @@ package de.einphil.hardcoresmp.commands;
 
 
 
+import net.minecraft.world.level.World;
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
@@ -13,9 +15,9 @@ public class SpawnCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(!(sender instanceof Player)) return false;
-        Player player = (Player) sender;
-        player.teleport(new Location(player.getWorld(),0,66,0));
+        if(!(sender instanceof Player player)) return false;
+        player.teleport(Bukkit.getWorld("world").getSpawnLocation());
         return false;
     }
 }
+
