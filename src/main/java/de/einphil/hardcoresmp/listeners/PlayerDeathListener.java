@@ -20,6 +20,7 @@ public class PlayerDeathListener implements Listener {
     private Plugin hardcoreSMP;
 
     public PlayerDeathListener(HardcoreSMP hardcoreSMP) {
+        this.hardcoreSMP = hardcoreSMP;
     }
 
     private final char oe = '\u00F6';
