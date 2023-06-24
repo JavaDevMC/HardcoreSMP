@@ -1,6 +1,8 @@
 package de.einphil.hardcoresmp.listeners;
 
+import com.comphenix.protocol.PacketType;
 import com.maximde.pluginutils.ColorUtils;
+import de.einphil.hardcoresmp.HardcoreSMP;
 import de.einphil.hardcoresmp.utils.GriefingLogger;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -9,10 +11,16 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.PlayerDeathEvent;
+import org.bukkit.plugin.Plugin;
 
 import java.awt.*;
 
 public class PlayerDeathListener implements Listener {
+
+    private Plugin hardcoreSMP;
+
+    public PlayerDeathListener(HardcoreSMP hardcoreSMP) {
+    }
 
     private final char oe = '\u00F6';
     private final char ae = '\u00E4';
@@ -32,11 +40,16 @@ public class PlayerDeathListener implements Listener {
             victim.kickPlayer(ColorUtils.generateGradientText(new Color(206, 0, 0), new Color(238, 84, 0), "Du bist gestorben und damit raus!"));
             return;
         }
+
+
         GriefingLogger.log(killer, "killed " + victim.getName());
         if(killer.getMaxHealth() <= 2) {
             killer.setHealth(0);
             killer.setWhitelisted(false);
+            Bukkit.getScheduler().scheduleSyncDelayedTask(this.hardcoreSMP, () -> {
+                //kick player
             killer.kickPlayer(ColorUtils.generateGradientText(new Color(206, 0, 0), new Color(238, 84, 0), "Du hast jemanden getötet und deine letzen Herzen verloren! Damit bist du raus!"));
+            }, 2L);
         } else {
             killer.setMaxHealth(killer.getMaxHealth()-4);
         }
